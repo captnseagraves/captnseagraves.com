@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0f1a;
+  --color-bg-raised: #0f1520;
+  --color-bg-card: #131b28;
+  --color-bg-hover: #1a2434;
+  --color-text: #e8ecf4;
+  --color-text-muted: #8e9aae;
+  --color-text-dim: #5b6578;
+  --color-accent: #5ec9d6;
+  --color-accent-hover: #7dd8e3;
+  --color-accent-violet: #a78bfa;
+  --color-accent-violet-hover: #bfa6ff;
+  --color-border: #1e2838;
+  --color-border-strong: #2a3549;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 50% -10%,
+      rgba(94, 201, 214, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 80% 20%,
+      rgba(167, 139, 250, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(142, 154, 174, 0.08) 1px,
+      transparent 0
+    );
+  background-size: auto, auto, 24px 24px;
+  background-attachment: fixed;
+}
+
+@utility gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-accent-violet) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility accent-text {
+  color: var(--color-accent);
+}
+
+@utility violet-text {
+  color: var(--color-accent-violet);
+}
+
+@utility glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(94, 201, 214, 0.35),
+    0 0 32px -4px rgba(94, 201, 214, 0.35),
+    0 0 48px -12px rgba(167, 139, 250, 0.3);
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border-strong);
+  background: linear-gradient(
+    180deg,
+    rgba(30, 40, 56, 0.6),
+    rgba(19, 27, 40, 0.6)
+  );
+  backdrop-filter: blur(6px);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+@utility chip-accent {
+  border-color: rgba(94, 201, 214, 0.4);
+  color: var(--color-text);
+  box-shadow: 0 0 24px -8px rgba(94, 201, 214, 0.4);
+}
+
+@utility section-heading {
+  position: relative;
+  display: inline-block;
+}
