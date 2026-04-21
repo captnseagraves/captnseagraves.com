@@ -24,13 +24,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <a
-          href="#"
-          className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors"
-        >
-          KS
-        </a>
+      <div className="mx-auto flex max-w-4xl items-center justify-end px-6 py-4">
         <div className="flex gap-6">
           {links.map((link) => (
             <a
