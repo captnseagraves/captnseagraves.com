@@ -8,21 +8,21 @@ That sentence is the whole reason I started.
 
 The social products I'd watched and helped build over the prior decade — the messaging tools, the social apps, the dating products — optimized for matches and not for depth. They engineered novelty, not closeness. The pattern that kept showing up in my own life and my friends' lives was a quiet erosion: you move to a new city, you have a few people you text, and over the years your circle gets thinner. The medium of friendship in adulthood is shared time at a table, not a swipe. So in early 2025 I started building Dinner — a curated community-dinner platform that took strangers in a city, grouped them by personality and affinity, and put them across a table together for an evening.
 
-I built it solo. iOS, Android, web. The marketing site at letsdinner.co. An admin tool to curate signups and run matching. A multi-market paid acquisition funnel to test cities at the unit-economics level. A signup flow with an in-app messaging layer for the days leading up to a dinner. And, late in the project, a Claude-powered matching system that grouped people into tables and wrote a short rationale, "Why you're at this table," that landed in the app the night of the event.
+I built it solo. iOS, Android, web. The marketing site at letsdinner.co. An admin tool to curate signups and run matching. A multi-market paid acquisition funnel to test cities at the unit-economics level. A signup flow with an in-app messaging layer. And, late in the project, a Claude-powered matching system that grouped people into tables and wrote a short rationale, "Why you're at this table," that landed in the app the night of the event.
 
 722 commits. One person.
 
-I shut it down last month.
+I shut it down.
 
 This is the writeup.
 
 ## What I built
 
-The product surface was unreasonable for one person, on purpose. Dinner was a real consumer experience or it was nothing — chat, an admin dashboard, a marketing site, three platforms — because the moment you ask someone to commit a Wednesday evening and pay you to sit with strangers, every seam matters. You can't ship 60% of the experience and expect strangers to show up.
+The product surface was unreasonable for one person, on purpose. Dinner was a real consumer experience or it was nothing — chat, an admin dashboard, a marketing site, three platforms — because the moment you ask someone to commit a weeknight and pay you to sit with strangers, every seam matters. You can't ship 60% of the experience and expect strangers to show up.
 
 So I shipped 100%.
 
-The mobile app, in React Native, on iOS and Android: account creation, personality and affinity preference capture, in-app messaging between matched diners in the days before a dinner, the night-of "Why you're at this table" card, post-dinner check-ins. The full-stack web app for users who didn't want to install yet. The admin dashboard with every signup row inspectable, per-row matching, per-run undo, post-event reconciliation. The marketing site for paid acquisition to point at. The branding and visual identity, because I was not paying a designer for v1. The community operations playbook for the actual dinners, which is a different kind of code.
+The mobile app, in React Native, on iOS and Android: account creation, personality and affinity preference capture, in-app messaging between matched diners, the "Why you're at this table" card. The full-stack web app for users who didn't want to install yet. The admin dashboard with every signup row inspectable, per-row matching, per-run undo. The marketing site for paid acquisition to point at. The branding and visual identity, because I was not paying a designer for v1. The community operations playbook for the actual dinners, which is a different kind of code.
 
 Three platforms shipped from one person is a taste exercise. You don't get to build six versions of a feature. Every screen has to earn its place across iOS, Android, and web. You learn fast which features are vestigial. I cut more than I shipped.
 
@@ -42,7 +42,7 @@ So I built matching against Claude. The pipeline:
 4. For each proposed table, have the model write a per-table rationale: a short, voice-y, specific paragraph titled "Why you're at this table" that tells each diner what their match was about.
 5. Persist the run, the rationale, and the assignments. Surface them in the app the night of the dinner.
 
-I built undo at every layer — per-signup, per-run, per-batch — because the moment you put an LLM between two humans and a Wednesday-night plan, you need to be able to roll back. The matching service has a snapshot-tested client, integration tests against a stubbed rationale generator, and a separate admin route for re-running a single signup if the model picks badly. The unglamorous operational hardening that turns "AI demo" into "AI shipped."
+I built undo at every layer — per-signup, per-run, per-batch — because the moment you put an LLM between two humans and a weeknight plan, you need to be able to roll back. The matching service has a snapshot-tested client, integration tests against a stubbed rationale generator, and a separate admin route for re-running a single signup if the model picks badly. The unglamorous operational hardening that turns "AI demo" into "AI shipped."
 
 > The model is fifteen percent. The system around the model is the rest.
 
@@ -54,11 +54,13 @@ I'm not claiming I shipped Claude-driven consumer matching first or earliest. Wh
 
 That's the whole reason.
 
-The economics could have worked. The product worked. Cities responded. The dinners that ran were good — strangers walked away with phone numbers and plans for the next month. But the operating model required a founder on the ground in a single anchor market, doing community curation, photographing the dinners, showing up to the venues, building the local credibility that makes a stranger trust a signup with a $40 charge attached. That's not a model you outsource in v1. That's the founder's job, and it requires a body in a city.
+The product was real. The system was built end to end across three platforms. The paid funnel returned about $0.50 on every $1 in early tests — a defensible unit-level number for a cold-start community product. But the operating model required a founder on the ground in a single anchor market — doing community curation, photographing dinners, showing up to venues, building the local credibility that makes a stranger trust a signup with a $40 charge attached. That's not a model you outsource in v1. That's the founder's job, and it requires a body in a city.
 
-I started Dinner in Brooklyn. I ended up living mostly in Nosara. The two facts can't be reconciled by force. I tried for a few months — flying back, running a dinner in person, flying out, watching the next month's signups thin. The market wasn't wrong. My life was. Pushing harder against that wouldn't have been resilience. It would have been denial dressed up as resilience, which is a thing I've watched founders do, and a thing I've done myself before.
+I started Dinner in Brooklyn. I ended up living mostly in Nosara. The two facts can't be reconciled by force.
 
-So I made the call. I told the small list of people who knew about Dinner, paused acquisition, finished the dinners that were already on the calendar, and shut down the platform. I kept the code, kept the infrastructure paid for through the next quarter so I could write this, and walked.
+I could have tried to push through it. Pushing harder against an invalidated thesis isn't resilience, though — it's denial dressed up as resilience, which is a thing I've watched founders do and a thing I've done myself before. The market wasn't wrong. My life was. The right call was the boring call: stop.
+
+So I stopped.
 
 Knowing when to stop is a skill. The cost of grinding through a market or a life condition that's invalidating your thesis is much higher than the ego cost of admitting it. I'd rather pay the ego cost.
 
@@ -86,4 +88,4 @@ Concretely: Head of Product, AI Product Manager, Founding Engineer, Forward Depl
 
 If you're building an AI product where the unglamorous infrastructure is the work — caching, evaluation, human-in-the-loop, undo, the boring durable parts — and you want someone who can do the engineering, the product, and the pitch, I'd like to talk.
 
-The dinners that ran were good. The lesson is paid for. The next thing is the next thing.
+The lesson is paid for. The next thing is the next thing.
