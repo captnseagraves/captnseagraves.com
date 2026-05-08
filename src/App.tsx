@@ -7,6 +7,7 @@ import CaseStudies from "./components/sections/CaseStudies";
 import Skills from "./components/sections/Skills";
 import Recognition from "./components/sections/Recognition";
 import Contact from "./components/sections/Contact";
+import EssayPage from "./pages/EssayPage";
 
 function HomePage() {
   return (
@@ -29,7 +30,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      {/* /dinner route added in Batch 4 */}
+      <Route path="/dinner" element={<EssayPage slug="dinner" />} />
     </Routes>
   );
 }
