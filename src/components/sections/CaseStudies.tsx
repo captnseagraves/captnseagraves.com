@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Link } from "react-router-dom";
 import Section from "../layout/Section";
 import { caseStudies, type CaseStudy } from "../../data/caseStudies";
 
@@ -110,6 +111,17 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
                 <p className="border-l-2 border-[var(--color-accent-violet)] pl-4 text-sm italic leading-relaxed text-[var(--color-text)]">
                   {study.coda}
                 </p>
+              )}
+
+              {study.essayUrl && (
+                <div className="pt-1">
+                  <Link
+                    to={study.essayUrl}
+                    className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+                  >
+                    Read the full essay →
+                  </Link>
+                </div>
               )}
 
               {study.links && study.links.length > 0 && (
