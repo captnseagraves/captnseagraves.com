@@ -4,17 +4,24 @@ import type { Essay } from "../../data/essays";
 interface Props {
   essay: Essay;
   readingTimeLabel: string;
+  backTo?: string;
+  backLabel?: string;
 }
 
-export default function EssayHero({ essay, readingTimeLabel }: Props) {
+export default function EssayHero({
+  essay,
+  readingTimeLabel,
+  backTo = "/",
+  backLabel = "Back to home",
+}: Props) {
   return (
     <header className="border-b border-[var(--color-border)] pb-10">
       <Link
-        to="/"
+        to={backTo}
         className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
       >
         <span aria-hidden>←</span>
-        <span>Back to home</span>
+        <span>{backLabel}</span>
       </Link>
       <p className="mt-10 text-xs uppercase tracking-[0.18em] text-[var(--color-accent)]">
         {essay.eyebrow}
@@ -26,7 +33,7 @@ export default function EssayHero({ essay, readingTimeLabel }: Props) {
         {essay.tldr}
       </p>
       <p className="mt-6 text-xs uppercase tracking-wider text-[var(--color-text-dim)]">
-        {essay.role} · {essay.dates} · {readingTimeLabel}
+        {[essay.role, essay.dates, readingTimeLabel].filter(Boolean).join(" · ")}
       </p>
     </header>
   );

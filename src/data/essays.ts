@@ -3,8 +3,10 @@ export interface Essay {
   title: string;
   tldr: string;
   eyebrow: string;
-  role: string;
+  role?: string;
   dates: string;
+  /** ISO date (YYYY-MM-DD) used to sort the /writing index; undated essays sort last. */
+  date?: string;
   heroImage?: string;
   ogImage?: string;
   metaDescription: string;
@@ -27,4 +29,13 @@ export const essays: Essay[] = [
 
 export function getEssay(slug: string): Essay | undefined {
   return essays.find((e) => e.slug === slug);
+}
+
+export function getEssaysSorted(): Essay[] {
+  return [...essays].sort((a, b) => {
+    if (a.date && b.date) return b.date.localeCompare(a.date);
+    if (a.date) return -1;
+    if (b.date) return 1;
+    return 0;
+  });
 }

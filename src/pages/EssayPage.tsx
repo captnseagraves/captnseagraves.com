@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import EssayHero from "../components/essay/EssayHero";
@@ -10,10 +11,14 @@ import { readingTimeMinutes, formatReadingTime } from "../lib/readingTime";
 import { useDocumentMeta } from "../lib/useDocumentMeta";
 
 interface Props {
-  slug: string;
+  slug?: string;
+  backTo?: string;
+  backLabel?: string;
 }
 
-export default function EssayPage({ slug }: Props) {
+export default function EssayPage({ slug: slugProp, backTo, backLabel }: Props) {
+  const params = useParams<{ slug: string }>();
+  const slug = slugProp ?? params.slug ?? "";
   const essay = getEssay(slug);
   const body = loadEssayBody(slug);
 
@@ -29,7 +34,7 @@ export default function EssayPage({ slug }: Props) {
     ogImage: essay?.ogImage,
     url:
       typeof window !== "undefined"
-        ? `${window.location.origin}/${slug}`
+        ? `${window.location.origin}${window.location.pathname}`
         : undefined,
   });
 
@@ -57,6 +62,8 @@ export default function EssayPage({ slug }: Props) {
         <EssayHero
           essay={essay}
           readingTimeLabel={formatReadingTime(minutes)}
+          backTo={backTo}
+          backLabel={backLabel}
         />
         <EssayMarkdown body={body} />
         <EssayCloser shareTitle={`${essay.title} — Kevin Seagraves`} />
