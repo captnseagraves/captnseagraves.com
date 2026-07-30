@@ -23,18 +23,6 @@ export const essays: Essay[] = [
     metaDescription:
       "Reflections on the open-weights debate (the Nvidia coalition letter, Anthropic's position, and 'AI is Oil, Not God'), plus what I shipped and what I'm thinking about, week of July 21–28, 2026.",
   },
-  {
-    slug: "dinner",
-    title: "Dinner",
-    tldr: "I built and wound down a community-dinner platform solo over ten months — iOS, Android, web, AI-driven matching, paid funnel — because product-life fit is part of product-market fit.",
-    eyebrow: "Case Study · Essay",
-    role: "Founder",
-    dates: "Mar 2025 – Jan 2026",
-    heroImage: undefined,
-    ogImage: "/og/dinner.jpg",
-    metaDescription:
-      "How I built and wound down Dinner — a community-dinner platform shipped solo across iOS, Android, web, and a multi-market paid funnel, with Claude-powered matching in production.",
-  },
 ];
 
 export function getEssay(slug: string): Essay | undefined {

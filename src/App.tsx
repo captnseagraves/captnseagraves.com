@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -36,7 +36,7 @@ export default function App() {
         path="/writing/:slug"
         element={<EssayPage backTo="/writing" backLabel="Back to writing" />}
       />
-      <Route path="/dinner" element={<EssayPage slug="dinner" />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

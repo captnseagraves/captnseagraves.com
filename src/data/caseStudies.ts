@@ -150,7 +150,6 @@ export const caseStudies: CaseStudy[] = [
       "Shipping teaches you things nothing else will. I now know how to scope, build, and launch a cross-platform consumer product solo. That's permanent.",
     ],
     coda: "I started Dinner while living in Brooklyn, but transitioned to spending much of my time in Costa Rica. The model required high on-the-ground presence, and I couldn't deliver that remotely.",
-    essayUrl: "/dinner",
   },
   {
     id: "sbcalculator",
