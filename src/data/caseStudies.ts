@@ -152,4 +152,37 @@ export const caseStudies: CaseStudy[] = [
     coda: "I started Dinner while living in Brooklyn, but transitioned to spending much of my time in Costa Rica. The model required high on-the-ground presence, and I couldn't deliver that remotely.",
     essayUrl: "/dinner",
   },
+  {
+    id: "sbcalculator",
+    title: "SBA Deal Calculator",
+    role: "Solo builder (and active searcher)",
+    dates: "Jan – Jun 2026",
+    heroMetric:
+      "Live deal-math tool built from a 7-month business acquisition search — including an employee-ownership financing model developed with input from a Durango EO investment syndicate",
+    problem:
+      "I've spent 2026 searching to acquire a small business with SBA 7(a) financing — 25+ inquiries, 13+ NDAs, multiple deals taken to lender term sheets. Every deal raised the same questions: what does the debt service actually look like, does the cash flow cover it, and what's left for the owner? And when I met Small Capital, a syndicate financing employee ownership at acquisition, a harder question: how does the math work when a redeemable equity investor and an Employee Ownership Trust enter the capital stack? I built the calculator to answer both — with my real defaults, in public.",
+    whatIBuilt: [
+      "Core deal calculator — SBA 7(a) capital stack (80% bank / 10% seller note / 10% down), amortization at real defaults (8.75%, 10-year), DSCR with and without seller-note standby, tax and cash-reserve adjustments, owner take-home, and 5/10-year equity buildup",
+      "Small Capital / EOT financing module — models a redeemable preferred investor alongside SBA debt: free-cash-flow waterfall, year-by-year ownership migration into an Employee Ownership Trust, employee profit-share and outcome projections, and a max-affordable-deal-size solver against equity-injection and DSCR constraints",
+      "Side-by-side comparison of the same deal with and without the employee-ownership capital stack, plus a sensitivity grid over FCF share and SDE decline",
+      "Pure TypeScript calculation engine with vitest unit tests, separate from the React UI — Next.js, deployed on Vercel",
+    ],
+    impact: [
+      "In active use in my own search — the debt math behind real lender conversations and a fully drafted $1.0M LOI",
+      "Shared with Small Capital; I applied their feedback to the model's defaults, capital stack, and waterfalls, and they've used the build as reference for their own internal tooling",
+      "Public repo — anyone searching can fork it and pressure-test their own deal",
+    ],
+    lessons: [
+      "A calculator is a methodology made honest. Every default is a claim you have to defend — the moment my assumptions were executable, lenders and I had something concrete to argue about.",
+      "Modeling employee ownership at acquisition made the structural problem precise: it's not that the math doesn't work, it's that SBA underwriting doesn't yet have a box for it.",
+      "Building the tool in public turned a solo search into collaboration — the fastest feedback I got came from sharing a URL and a repo, not a deck.",
+    ],
+    links: [
+      { label: "Live calculator", url: "https://sbcalculator.vercel.app" },
+      {
+        label: "GitHub",
+        url: "https://github.com/captnseagraves/sbcalculator",
+      },
+    ],
+  },
 ];
