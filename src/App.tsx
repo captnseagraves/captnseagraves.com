@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -29,14 +30,17 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/writing" element={<WritingPage />} />
-      <Route
-        path="/writing/:slug"
-        element={<EssayPage backTo="/writing" backLabel="Back to writing" />}
-      />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <Analytics />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/writing" element={<WritingPage />} />
+        <Route
+          path="/writing/:slug"
+          element={<EssayPage backTo="/writing" backLabel="Back to writing" />}
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 }

@@ -31,6 +31,7 @@ export function useDocumentMeta(meta: Meta) {
     }
     if (meta.url) {
       setMeta('meta[property="og:url"]', "content", meta.url);
+      setMeta('link[rel="canonical"]', "href", meta.url);
     }
     setMeta('meta[name="twitter:title"]', "content", meta.title);
     setMeta('meta[name="twitter:description"]', "content", meta.description);
