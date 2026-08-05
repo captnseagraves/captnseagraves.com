@@ -6,7 +6,9 @@
     "eyebrow": "Essay",
     "dates": "August 5, 2026",
     "date": "2026-08-05",
-    "metaDescription": "How seven months of small-business acquisition searching (78 inquiries, 28 NDAs, three deals taken deep) produced a screening filter, a three-approach valuation methodology, and a free open-source SBA deal calculator."
+    "metaDescription": "How seven months of small-business acquisition searching (78 inquiries, 28 NDAs, three deals taken deep) produced a screening filter, a three-approach valuation methodology, and a free open-source SBA deal calculator.",
+    "heroImage": "/images/essays/sba-search-calculator.png",
+    "ogImage": "/og/sba-search-calculator.jpg"
   },
   {
     "slug": "2026-07-28-weekly",
