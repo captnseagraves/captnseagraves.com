@@ -204,7 +204,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     impact: [
       "In production: every essay in /writing ships through this pipeline, from evidence to LinkedIn",
-      "Published as a public template repo with the sanitized playbook, collectors, and test suite",
+      "Open source as an installable Claude Code skill — one git clone into ~/.claude/skills and anyone can run /weekly-review on their own week (playbook, collectors, and test suite included)",
       "Closed my single biggest job-market gap — publishing — by making the publishing cost near zero while keeping every claim true",
     ],
     lessons: [

@@ -4,7 +4,9 @@ skill — it was publishing. The work existed; the evidence was private.
 So I built a system that makes publishing nearly free: an agent that
 turns a week of real work into a shipped essay. This site's
 [/writing](/writing) section is its output. The system itself is
-[open source](https://github.com/captnseagraves/weekly-review-agent).
+[open source](https://github.com/captnseagraves/weekly-review-agent) —
+and it's packaged as a Claude Code skill, so you can run it on your own
+week, not just read about mine.
 
 The obvious version of this — "have an LLM write my blog" — is easy and
 bad. Fluent models fabricate by default, flatten your voice into
@@ -78,6 +80,18 @@ markdown playbook the agent follows, a static site with build-time
 OpenGraph prerendering. The interesting parts aren't the technology —
 they're the product decisions about where the model is allowed to act
 and where it must stop and ask.
+
+And because the playbook is just a skill, implementing it yourself is
+one command:
+
+```bash
+git clone https://github.com/captnseagraves/weekly-review-agent \
+  ~/.claude/skills/weekly-review
+```
+
+Swap in your own paths, voice guide, and privacy rules in `SKILL.md`,
+and `/weekly-review draft` runs the whole loop — collectors, interview,
+draft, art, gates — on your week.
 
 ## What I'd tell you if you're building agents
 

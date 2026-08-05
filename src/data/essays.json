@@ -1,12 +1,21 @@
 [
   {
+    "slug": "employee-ownership-acquisition",
+    "title": "Employee ownership at acquisition: finding the structure that works",
+    "tldr": "Why employee ownership usually waits until 'later' and never happens — and the Durango syndicate, the structure menu with real price tags, the SBA friction, and the live workarounds that could make it a day-one choice instead.",
+    "eyebrow": "Essay",
+    "dates": "August 6, 2026",
+    "date": "2026-08-06",
+    "metaDescription": "Employee ownership at the moment of small-business acquisition: Small Capital's model, the EOT/co-op/LLC/ESOP structure menu with costs, why SBA underwriting makes day-one EO hard, and the workarounds being built right now."
+  },
+  {
     "slug": "building-the-weekly-review-agent",
     "title": "I built an agent that publishes my week",
-    "tldr": "The agentic pipeline behind this site's weekly essays: deterministic evidence collectors, an interview that keeps me the author, a redaction layer that earned its keep, and approval gates before anything irreversible. Open source.",
+    "tldr": "The agentic pipeline behind this site's weekly essays: deterministic evidence collectors, an interview that keeps me the author, a redaction layer that earned its keep, and approval gates before anything irreversible. Open source as a Claude Code skill you can install and run on your own week.",
     "eyebrow": "Essay",
     "dates": "August 5, 2026",
     "date": "2026-08-05",
-    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source."
+    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source as an installable Claude Code skill."
   },
   {
     "slug": "sba-search-calculator",
