@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/writing", "destination": "/writing/index.html" },
+    { "source": "/writing/:slug", "destination": "/writing/:slug/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
