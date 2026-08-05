@@ -19,10 +19,10 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <section className="border-y border-[var(--color-border)] bg-[var(--color-accent)]/[0.03] px-6 py-14">
           <NewsletterSignup />
         </section>
+        <About />
         <CaseStudies />
         <Recognition />
         <Skills />

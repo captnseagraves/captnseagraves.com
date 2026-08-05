@@ -50,7 +50,7 @@ export default function NewsletterSignup({ compact = false }: Props) {
             : "mt-3 text-2xl font-semibold sm:text-3xl"
         }
       >
-        Get the next essay by email
+        I write every week — sign up to get the next essay by email
       </h3>
       <p
         className={`mt-2 text-sm leading-[1.6] text-[var(--color-text-muted)] ${
