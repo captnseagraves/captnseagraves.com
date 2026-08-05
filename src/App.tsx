@@ -10,6 +10,8 @@ import Recognition from "./components/sections/Recognition";
 import Contact from "./components/sections/Contact";
 import EssayPage from "./pages/EssayPage";
 import WritingPage from "./pages/WritingPage";
+import SubscribedPage from "./pages/SubscribedPage";
+import NewsletterSignup from "./components/NewsletterSignup";
 
 function HomePage() {
   return (
@@ -18,6 +20,9 @@ function HomePage() {
       <main>
         <Hero />
         <About />
+        <section className="border-y border-[var(--color-border)] bg-[var(--color-accent)]/[0.03] px-6 py-14">
+          <NewsletterSignup />
+        </section>
         <CaseStudies />
         <Recognition />
         <Skills />
@@ -35,6 +40,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/writing" element={<WritingPage />} />
+        <Route path="/subscribed" element={<SubscribedPage />} />
         <Route
           path="/writing/:slug"
           element={<EssayPage backTo="/writing" backLabel="Back to writing" />}

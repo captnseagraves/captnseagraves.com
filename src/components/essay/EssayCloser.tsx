@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import NewsletterSignup from "../NewsletterSignup";
 
 interface Props {
   shareTitle: string;
@@ -28,6 +29,9 @@ export default function EssayCloser({ shareTitle }: Props) {
 
   return (
     <footer className="mt-20 border-t border-[var(--color-border)] pt-10">
+      <div className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-accent)]/[0.03] p-6">
+        <NewsletterSignup compact />
+      </div>
       <p className="text-sm uppercase tracking-wider text-[var(--color-accent)]">
         Currently open to
       </p>

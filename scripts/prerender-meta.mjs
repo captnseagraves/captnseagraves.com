@@ -57,4 +57,35 @@ for (const essay of essays) {
   });
 }
 
-console.log(`prerender-meta: wrote /writing + ${essays.length} essay page(s)`);
+// RSS feed — powers the newsletter automation and standard feed readers.
+const escXml = (s) =>
+  s.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+const items = [...essays]
+  .filter((e) => e.date)
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .map((e) => {
+    const url = `${SITE}/writing/${e.slug}`;
+    const pub = new Date(`${e.date}T12:00:00Z`).toUTCString();
+    return (
+      `    <item>\n` +
+      `      <title>${escXml(e.title)}</title>\n` +
+      `      <link>${url}</link>\n` +
+      `      <guid>${url}</guid>\n` +
+      `      <pubDate>${pub}</pubDate>\n` +
+      `      <description>${escXml(e.tldr)}</description>\n` +
+      `    </item>`
+    );
+  })
+  .join("\n");
+const rss =
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<rss version="2.0">\n  <channel>\n` +
+  `    <title>Kevin Seagraves — Writing</title>\n` +
+  `    <link>${SITE}/writing</link>\n` +
+  `    <description>Essays and weekly notes on building with AI agents, buying a small business, and working in public.</description>\n` +
+  `${items}\n  </channel>\n</rss>\n`;
+writeFileSync(join(root, "dist/rss.xml"), rss);
+
+console.log(
+  `prerender-meta: wrote /writing + ${essays.length} essay page(s) + rss.xml`,
+);
