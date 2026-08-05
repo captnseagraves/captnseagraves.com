@@ -27,6 +27,11 @@ function HomePage() {
         <Recognition />
         <Skills />
         <Contact />
+        <section className="mx-auto max-w-4xl px-6 pb-20">
+          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-accent)]/[0.03] p-6">
+            <NewsletterSignup compact />
+          </div>
+        </section>
       </main>
       <Footer />
     </>
