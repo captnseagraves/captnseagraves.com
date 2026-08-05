@@ -159,7 +159,7 @@ export const caseStudies: CaseStudy[] = [
     heroMetric:
       "Live deal-math tool built from a 7-month business acquisition search — including an employee-ownership financing model developed with input from a Durango EO investment syndicate",
     problem:
-      "I've spent 2026 searching to acquire a small business with SBA 7(a) financing — 25+ inquiries, 13+ NDAs, multiple deals taken to lender term sheets. Every deal raised the same questions: what does the debt service actually look like, does the cash flow cover it, and what's left for the owner? And when I met Small Capital, a syndicate financing employee ownership at acquisition, a harder question: how does the math work when a redeemable equity investor and an Employee Ownership Trust enter the capital stack? I built the calculator to answer both — with my real defaults, in public.",
+      "I've spent 2026 searching to acquire a small business with SBA 7(a) financing — 78 listings inquired, 28 NDAs signed, multiple deals taken to lender term sheets. Every deal raised the same questions: what does the debt service actually look like, does the cash flow cover it, and what's left for the owner? And when I met Small Capital, a syndicate financing employee ownership at acquisition, a harder question: how does the math work when a redeemable equity investor and an Employee Ownership Trust enter the capital stack? I built the calculator to answer both — with my real defaults, in public.",
     whatIBuilt: [
       "Core deal calculator — SBA 7(a) capital stack (80% bank / 10% seller note / 10% down), amortization at real defaults (8.75%, 10-year), DSCR with and without seller-note standby, tax and cash-reserve adjustments, owner take-home, and 5/10-year equity buildup",
       "Small Capital / EOT financing module — models a redeemable preferred investor alongside SBA debt: free-cash-flow waterfall, year-by-year ownership migration into an Employee Ownership Trust, employee profit-share and outcome projections, and a max-affordable-deal-size solver against equity-injection and DSCR constraints",
@@ -183,5 +183,6 @@ export const caseStudies: CaseStudy[] = [
         url: "https://github.com/captnseagraves/sbcalculator",
       },
     ],
+    essayUrl: "/writing/sba-search-calculator",
   },
 ];

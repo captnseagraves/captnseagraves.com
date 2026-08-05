@@ -1,5 +1,14 @@
 [
   {
+    "slug": "sba-search-calculator",
+    "title": "Seven months of searching for a small business — and the calculator it produced",
+    "tldr": "78 listings inquired, 28 NDAs, three deals deep, zero closed — and the screening filter, three-approach valuation method, and open-source SBA deal calculator the search produced.",
+    "eyebrow": "Essay",
+    "dates": "August 5, 2026",
+    "date": "2026-08-05",
+    "metaDescription": "How seven months of small-business acquisition searching (78 inquiries, 28 NDAs, three deals taken deep) produced a screening filter, a three-approach valuation methodology, and a free open-source SBA deal calculator."
+  },
+  {
     "slug": "2026-07-28-weekly",
     "title": "Oil, god, and open weights",
     "tldr": "Where I land on the week's open-weights fight — Nvidia's letter, Anthropic's answer, Packy's metaphor — after a career on the open-source side of the argument. Plus 30 commits of reliability work, a deal I walked away from, and the pipeline that drafts these posts.",
