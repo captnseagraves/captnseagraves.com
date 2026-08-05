@@ -6,7 +6,9 @@
     "eyebrow": "Essay",
     "dates": "August 6, 2026",
     "date": "2026-08-06",
-    "metaDescription": "Employee ownership at the moment of small-business acquisition: why the deal logic works for searchers, employees, and sellers, why SBA underwriting makes it hard, and the sub-20% Employee Ownership Trust structure designed to fit a 7(a) loan cleanly."
+    "metaDescription": "Employee ownership at the moment of small-business acquisition: why the deal logic works for searchers, employees, and sellers, why SBA underwriting makes it hard, and the sub-20% Employee Ownership Trust structure designed to fit a 7(a) loan cleanly.",
+    "heroImage": "/images/essays/employee-ownership-acquisition.png",
+    "ogImage": "/og/employee-ownership-acquisition.jpg"
   },
   {
     "slug": "building-the-weekly-review-agent",
