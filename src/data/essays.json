@@ -1,5 +1,14 @@
 [
   {
+    "slug": "building-the-weekly-review-agent",
+    "title": "I built an agent that publishes my week",
+    "tldr": "The agentic pipeline behind this site's weekly essays: deterministic evidence collectors, an interview that keeps me the author, a redaction layer that earned its keep, and approval gates before anything irreversible. Open source.",
+    "eyebrow": "Essay",
+    "dates": "August 5, 2026",
+    "date": "2026-08-05",
+    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source."
+  },
+  {
     "slug": "sba-search-calculator",
     "title": "Seven months of searching for a small business — and the calculator it produced",
     "tldr": "78 listings inquired, 28 NDAs, three deals deep, zero closed — and the screening filter, three-approach valuation method, and open-source SBA deal calculator the search produced.",

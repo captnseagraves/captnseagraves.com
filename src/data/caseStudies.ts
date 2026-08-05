@@ -185,4 +185,41 @@ export const caseStudies: CaseStudy[] = [
     ],
     essayUrl: "/writing/sba-search-calculator",
   },
+  {
+    id: "weekly-review-agent",
+    title: "Weekly Review Agent",
+    role: "Solo builder (product, engineering, and the human in the loop)",
+    dates: "Jul – Aug 2026",
+    heroMetric:
+      "An agentic publishing pipeline in production — its output is the /writing section of this site",
+    problem:
+      "I build constantly and publish almost never — and for the AI product roles I care about, unpublished work might as well not exist. 'Have an LLM write my blog' is easy and bad: fluent models fabricate by default, flatten your voice, and can't be trusted near private data or a Publish button. The real product problem is designing an agent system where grounding, voice, privacy, and irreversible actions are first-class constraints — then living with it every week.",
+    whatIBuilt: [
+      "Evidence collectors (deterministic, stdlib, 29 unit tests) over every work surface — agent-session transcripts, git history across ~70 repos, chat-app exports — with a redaction layer that strips credential-shaped strings before anything reaches a prompt",
+      "A grounding rule enforced end-to-end: the agent is not allowed to invent an accomplishment; missing evidence becomes an explicit [FILL IN] slot for me, never a plausible guess",
+      "An interview-driven synthesis flow — open brain-dump first, then pointed questions generated from the week's evidence — so the opinions in every essay are mine and the model only does assembly",
+      "Human approval gates at each irreversible step: draft approval, site push, and social posting are three separate gates, with chrome-assisted posting where I click Post",
+      "A header-art stage: concept chosen in review, three style-varied generations against the newest image model with a fallback chain, my pick wired into per-essay OpenGraph tags via build-time prerendering",
+      "The full publishing loop: state tracking, a Friday reminder routine, static-site integration, and link-preview infrastructure — all orchestrated by a skill playbook the agent follows",
+    ],
+    impact: [
+      "In production: every essay in /writing ships through this pipeline, from evidence to LinkedIn",
+      "Published as a public template repo with the sanitized playbook, collectors, and test suite",
+      "Closed my single biggest job-market gap — publishing — by making the publishing cost near zero while keeping every claim true",
+    ],
+    lessons: [
+      "Hallucination is a product constraint, not a model bug. Design the system so fabrication is structurally impossible and the model's fluency becomes safe to use.",
+      "Deterministic where possible, model where necessary. Collection and redaction are plain tested code; judgment is the model's job; opinions stay human.",
+      "The redaction layer wasn't theoretical — the collectors surfaced a real API key pasted into an old session, and GitHub's push protection later caught a fixture my own scrub missed. Secrets management around LLM pipelines deserves paranoia.",
+      "Approval gates have to be separate. 'The draft is approved' and 'push it' and 'post it' are three different decisions, and collapsing them is how agents publish things you regret.",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/captnseagraves/weekly-review-agent",
+      },
+      { label: "The output", url: "/writing" },
+    ],
+    essayUrl: "/writing/building-the-weekly-review-agent",
+  },
 ];
