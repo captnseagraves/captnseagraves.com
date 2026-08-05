@@ -65,6 +65,13 @@ export default function EssayPage({ slug: slugProp, backTo, backLabel }: Props) 
           backTo={backTo}
           backLabel={backLabel}
         />
+        {essay.heroImage && (
+          <img
+            src={essay.heroImage}
+            alt=""
+            className="mt-10 w-full rounded-xl border border-[var(--color-border)]"
+          />
+        )}
         <EssayMarkdown body={body} />
         <EssayCloser shareTitle={`${essay.title} — Kevin Seagraves`} />
       </main>

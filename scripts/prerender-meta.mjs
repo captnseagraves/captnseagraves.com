@@ -19,13 +19,17 @@ const HOME_DESCRIPTIONS = [
 
 const esc = (s) => s.replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
-function pageHtml({ title, description, url, ogType }) {
+function pageHtml({ title, description, url, ogType, ogImage }) {
   let html = baseHtml;
   html = html.replaceAll(HOME_TITLE, esc(title));
   for (const d of HOME_DESCRIPTIONS) html = html.replaceAll(d, esc(description));
   html = html.replaceAll(`href="${SITE}/"`, `href="${url}"`);
   html = html.replaceAll(`content="${SITE}/"`, `content="${url}"`);
   html = html.replace('property="og:type" content="website"', `property="og:type" content="${ogType}"`);
+  if (ogImage) {
+    const abs = ogImage.startsWith("http") ? ogImage : `${SITE}${ogImage}`;
+    html = html.replaceAll(`${SITE}/og-image.jpg`, abs);
+  }
   return html;
 }
 
@@ -49,6 +53,7 @@ for (const essay of essays) {
     description: essay.metaDescription,
     url: `${SITE}/writing/${essay.slug}`,
     ogType: "article",
+    ogImage: essay.ogImage,
   });
 }
 
