@@ -17,7 +17,9 @@
     "eyebrow": "Essay",
     "dates": "August 5, 2026",
     "date": "2026-08-05",
-    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source as an installable Claude Code skill."
+    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source as an installable Claude Code skill.",
+    "heroImage": "/images/essays/building-the-weekly-review-agent.jpg",
+    "ogImage": "/og/building-the-weekly-review-agent.jpg"
   },
   {
     "slug": "sba-search-calculator",
