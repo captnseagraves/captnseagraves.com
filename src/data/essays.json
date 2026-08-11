@@ -1,5 +1,14 @@
 [
   {
+    "slug": "standup-to-tickets",
+    "title": "Standup ends when the tickets are on the board",
+    "tldr": "I turned our daily standup into a pipeline: transcript in, Slack to-dos + reconciled sprint board + filed notes out — with two human review gates and 5-10 minutes of my time instead of 1-3 hours.",
+    "eyebrow": "Essay",
+    "dates": "August 11, 2026",
+    "date": "2026-08-11",
+    "metaDescription": "How a single Claude Code skill turns a recorded standup into Slack to-dos, deduped sprint-board tickets, and a filed transcript — with human review gates at every irreversible step."
+  },
+  {
     "slug": "employee-ownership-acquisition",
     "title": "Employee ownership at acquisition: finding the structure that works",
     "tldr": "More capital for the searcher, ownership for the employees, legacy for the seller — the deal logic of employee ownership at acquisition, and the airtight sub-20% Employee Ownership Trust structure I'm building to bring to SBA lenders.",
