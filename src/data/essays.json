@@ -2,16 +2,16 @@
   {
     "slug": "standup-to-tickets",
     "title": "Standup ends when the tickets are on the board",
-    "tldr": "I turned our daily standup into a pipeline: transcript in, Slack to-dos + reconciled sprint board + filed notes out — with two human review gates and 5-10 minutes of my time instead of 1-3 hours.",
+    "tldr": "I turned our daily standup into a pipeline: transcript in, Slack to-dos + reconciled sprint board + filed notes out \u2014 with two human review gates and 5-10 minutes of my time instead of 1-3 hours.",
     "eyebrow": "Essay",
     "dates": "August 11, 2026",
     "date": "2026-08-11",
-    "metaDescription": "How a single Claude Code skill turns a recorded standup into Slack to-dos, deduped sprint-board tickets, and a filed transcript — with human review gates at every irreversible step."
+    "metaDescription": "How a single Claude Code skill turns a recorded standup into Slack to-dos, deduped sprint-board tickets, and a filed transcript \u2014 with human review gates at every irreversible step."
   },
   {
     "slug": "employee-ownership-acquisition",
     "title": "Employee ownership at acquisition: finding the structure that works",
-    "tldr": "More capital for the searcher, ownership for the employees, legacy for the seller — the deal logic of employee ownership at acquisition, and the airtight sub-20% Employee Ownership Trust structure I'm building to bring to SBA lenders.",
+    "tldr": "More capital for the searcher, ownership for the employees, legacy for the seller \u2014 the deal logic of employee ownership at acquisition, and the airtight sub-20% Employee Ownership Trust structure I'm building to bring to SBA lenders.",
     "eyebrow": "Essay",
     "dates": "August 6, 2026",
     "date": "2026-08-06",
@@ -26,14 +26,14 @@
     "eyebrow": "Essay",
     "dates": "August 5, 2026",
     "date": "2026-08-05",
-    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates — open source as an installable Claude Code skill.",
+    "metaDescription": "How I built the agent that publishes my weekly essays: grounding rules that forbid invented accomplishments, interview-driven synthesis, credential redaction, and human approval gates \u2014 open source as an installable Claude Code skill.",
     "heroImage": "/images/essays/building-the-weekly-review-agent.jpg",
     "ogImage": "/og/building-the-weekly-review-agent.jpg"
   },
   {
     "slug": "sba-search-calculator",
-    "title": "Seven months of searching for a small business — and the calculator it produced",
-    "tldr": "78 listings inquired, 28 NDAs, three deals deep, zero closed — and the screening filter, three-approach valuation method, and open-source SBA deal calculator the search produced.",
+    "title": "Seven months of searching for a small business \u2014 and the calculator it produced",
+    "tldr": "78 listings inquired, 28 NDAs, three deals deep, zero closed \u2014 and the screening filter, three-approach valuation method, and open-source SBA deal calculator the search produced.",
     "eyebrow": "Essay",
     "dates": "August 5, 2026",
     "date": "2026-08-05",
@@ -44,12 +44,23 @@
   {
     "slug": "2026-07-28-weekly",
     "title": "Oil, god, and open weights",
-    "tldr": "Where I land on the week's open-weights fight — Nvidia's letter, Anthropic's answer, Packy's metaphor — after a career on the open-source side of the argument. Plus 30 commits of reliability work, a deal I walked away from, and the pipeline that drafts these posts.",
+    "tldr": "Where I land on the week's open-weights fight \u2014 Nvidia's letter, Anthropic's answer, Packy's metaphor \u2014 after a career on the open-source side of the argument. Plus 30 commits of reliability work, a deal I walked away from, and the pipeline that drafts these posts.",
     "eyebrow": "Weekly Review",
     "dates": "July 28, 2026",
     "date": "2026-07-28",
     "heroImage": "/images/essays/2026-07-28-weekly.jpg",
     "ogImage": "/og/2026-07-28-weekly.jpg",
-    "metaDescription": "Reflections on the open-weights debate (the Nvidia coalition letter, Anthropic's position, and 'AI is Oil, Not God'), plus what I shipped and what I'm thinking about, week of July 21–28, 2026."
+    "metaDescription": "Reflections on the open-weights debate (the Nvidia coalition letter, Anthropic's position, and 'AI is Oil, Not God'), plus what I shipped and what I'm thinking about, week of July 21\u201328, 2026."
+  },
+  {
+    "slug": "building-for-strangers",
+    "title": "Building for strangers",
+    "tldr": "Two weeks spent dragging two projects across the line from tool to product \u2014 editable stages, spend caps, a real name and a domain \u2014 and the question underneath it: if a life is a piece of art, is this hour a good brushstroke?",
+    "eyebrow": "Weekly Review",
+    "dates": "August 21, 2026",
+    "date": "2026-08-21",
+    "metaDescription": "A tool you run yourself can be sharp and unfinished at the same time. None of that survives contact with a second person. Two weeks of crossing the line from tool to product.",
+    "heroImage": "/images/essays/building-for-strangers.png",
+    "ogImage": "/og/building-for-strangers.jpg"
   }
 ]
