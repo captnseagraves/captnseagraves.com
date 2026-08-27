@@ -1,5 +1,23 @@
 [
   {
+    "slug": "instructions-decay-hooks-dont",
+    "title": "Instructions decay, hooks don't",
+    "tldr": "Seventeen open Claude Code sessions and no way to tell which ones were waiting on me. The fix was three lines at the end of every response \u2014 and what made it stick wasn't the instruction, it was a one-line hook that re-states it every turn.",
+    "eyebrow": "Essay",
+    "dates": "August 27, 2026",
+    "date": "2026-08-27",
+    "metaDescription": "Why a CLAUDE.md instruction alone stops working in long agent sessions, and how a one-line UserPromptSubmit hook fixes it \u2014 the design behind an always-on Task/Status/Next footer, open source and installable."
+  },
+  {
+    "slug": "upwork-shortlist",
+    "title": "I let Claude read the proposals so I didn't have to \u2014 with a human veto",
+    "tldr": "53 Upwork proposals, all 53 with at least one red flag, and roughly 30 that never answered the screening questions. The agent I built to do the reading \u2014 open source, and structurally unable to contact a candidate.",
+    "eyebrow": "Essay",
+    "dates": "August 27, 2026",
+    "date": "2026-08-27",
+    "metaDescription": "An open-source TypeScript pipeline that ingests Upwork proposals, scores them with Claude against a weighted rubric, and emails a ranked shortlist \u2014 with tiers computed in code and a hard human gate before anyone is contacted."
+  },
+  {
     "slug": "standup-to-tickets",
     "title": "Standup ends when the tickets are on the board",
     "tldr": "I turned our daily standup into a pipeline: transcript in, Slack to-dos + reconciled sprint board + filed notes out \u2014 with two human review gates and 5-10 minutes of my time instead of 1-3 hours.",
