@@ -29,4 +29,10 @@ The rule I follow everywhere now: **automate the drafting, gate the publishing.*
 
 The output isn't notes. It's the actual work products the meeting was supposed to produce: commitments visible in Slack, a reconciled board, a filed transcript. The meeting itself didn't change at all — nobody had to adopt a tool, change how they talk, or even know the pipeline exists on day one. That's the adoption trick: automate your own chore first, and let the team experience the output before you ask anything of them.
 
+## It's on GitHub now
+
+I've open-sourced the skill: [standup-to-tickets](https://github.com/captnseagraves/standup-to-tickets). The procedure is `SKILL.md`; your team's specifics — the Slack channel, the sprint board, the name-to-user-ID table — live in a gitignored `config.md`, so the workflow is shareable without leaking your internals.
+
+That split is the reason it *can* be public, and I only did it properly when I went to publish. Fold the IDs into the procedure and a useful skill becomes an unshareable one — which, if you're writing skills you might ever want to hand to someone, is worth getting right on the first pass rather than the day you publish.
+
 One skill file, one morning routine, and standup now ends when the tickets are on the board — not when someone promises to make them.
