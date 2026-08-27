@@ -1,7 +1,23 @@
 {
   "rewrites": [
-    { "source": "/writing", "destination": "/writing/index.html" },
-    { "source": "/writing/:slug", "destination": "/writing/:slug/index.html" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    {
+      "source": "/writing",
+      "destination": "/writing/index.html"
+    },
+    {
+      "source": "/writing/:slug",
+      "destination": "/writing/:slug/index.html"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/writing/instructions-decay-hooks-dont",
+      "destination": "/writing/the-line-that-repeats-itself",
+      "permanent": true
+    }
   ]
 }

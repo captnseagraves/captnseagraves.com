@@ -1,12 +1,12 @@
 [
   {
-    "slug": "instructions-decay-hooks-dont",
-    "title": "Instructions decay, hooks don't",
-    "tldr": "Seventeen open Claude Code sessions and no way to tell which ones were waiting on me. The fix was three lines at the end of every response \u2014 and what made it stick wasn't the instruction, it was a one-line hook that re-states it every turn.",
+    "slug": "the-line-that-repeats-itself",
+    "title": "The line of code that repeats itself",
+    "tldr": "The most useful line of code in my agent setup does nothing but repeat itself. It's what keeps seventeen parallel Claude Code sessions legible when I come back to them \u2014 and why a static instruction can't hold a behavior for a whole session.",
     "eyebrow": "Essay",
     "dates": "August 27, 2026",
     "date": "2026-08-27",
-    "metaDescription": "Why a CLAUDE.md instruction alone stops working in long agent sessions, and how a one-line UserPromptSubmit hook fixes it \u2014 the design behind an always-on Task/Status/Next footer, open source and installable."
+    "metaDescription": "Seventeen parallel agent sessions and no way to tell which were waiting on me. Three lines at the end of every response fixed re-entry \u2014 and a one-line UserPromptSubmit hook, re-stating the reminder at the newest point in context every turn, is what makes them hold."
   },
   {
     "slug": "upwork-shortlist",
